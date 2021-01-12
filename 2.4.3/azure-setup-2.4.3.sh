@@ -7,7 +7,7 @@
 #  14) to enable sshd
 #  7) ping www.google.com to make sure connection to internet exists
 #  8) to login shell
-# curl -O https://raw.githubusercontent.com/benjholla/pfSense-CE-2.4.3-Azure/master/azure-setup.sh
+# curl -O https://raw.githubusercontent.com/Fmstrat/pfSense-CE-Azure/master/2.4.3/azure-setup.sh
 # chmod +x azure-setup.sh
 
 pkg upgrade
@@ -22,7 +22,7 @@ echo 'kldload udf'  >> /boot/loader.conf
 echo 'vfs.mountroot.timeout=300'  >> /boot/loader.conf
 
 # udf.ko originally from https://download.freebsd.org/ftp/releases/ISO-IMAGES/11.1/FreeBSD-11.1-RELEASE-amd64-bootonly.iso
-curl -O https://raw.githubusercontent.com/benjholla/pfSense-CE-2.4.3-Azure/master/udf.ko
+curl -O https://raw.githubusercontent.com/Fmstrat/pfSense-CE-Azure/master/2.4.3/udf.ko
 mv udf.ko /boot/kernel/
 
 git clone https://github.com/Azure/WALinuxAgent.git
